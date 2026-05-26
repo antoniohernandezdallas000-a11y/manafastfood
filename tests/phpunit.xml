@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false"
+         cacheResult="false">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>unit</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory>integration</directory>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">../backend</directory>
+        </include>
+        <report>
+            <html outputDirectory="coverage" />
+        </report>
+    </coverage>
+    <php>
+        <env name="TESTING" value="true"/>
+        <env name="DB_HOST" value="localhost"/>
+        <env name="DB_PORT" value="3306"/>
+        <env name="DB_NAME" value="mana_fast_food_test"/>
+        <env name="DB_USER" value="root"/>
+        <env name="DB_PASSWORD" value=""/>
+        <env name="JWT_SECRET" value="test_secret_key_mana_fast_food_2024"/>
+        <env name="JWT_EXPIRY" value="24h"/>
+        <env name="APP_ENV" value="testing"/>
+    </php>
+</phpunit>

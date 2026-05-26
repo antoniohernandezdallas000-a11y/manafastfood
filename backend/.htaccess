@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# Redirect everything to index.php (front controller)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Deny access to sensitive directories
+<FilesMatch "\.(env|sql|md|log)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+# Deny access to helpers and middleware directories
+RewriteRule ^helpers/ - [F,L]
+RewriteRule ^middleware/ - [F,L]
+RewriteRule ^config/ - [F,L]
+
+# CORS Headers
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+</IfModule>
+
+# PHP settings
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_value error_reporting E_ALL
+    php_value upload_max_filesize 5M
+    php_value post_max_size 6M
+    php_value max_execution_time 60
+</IfModule>

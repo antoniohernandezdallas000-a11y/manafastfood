@@ -1,0 +1,944 @@
+================================================================================
+VERBIX — COPYWRITING COMPLETO
+================================================================================
+Proyecto:   Maná Fast Food
+Marca:      Maná Fast Food
+Tono:       Energético, urbano, directo, con humor callejero,
+            provocativo pero amigable
+Keywords:   Súper Crispy, Trifásica, Doble Proteína, Especiales,
+            Team Salsa, Maná
+Prohibido:  "bienvenido", "somos apasionados", "soluciones integrales",
+            "nos complace", "a medida", "equipo de expertos",
+            "no dudes en contactarnos"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTA DEL COPYWRITER (VERBIX)
+
+Hice una inmersión completa en las páginas existentes del sitio (index.php,
+menu.php, carrito.php, checkout.php, confirmacion.php, registro.php,
+login.php). Cada texto que ves abajo está calibrado para:
+  • Coincidir con el layout existente (headlines hero, categorías, filtros,
+    formularios, pasos del checkout, carrito, estados vacíos, etc.)
+  • Usar el mismo tono callejero pero premium que ya se respira en el
+    diseño visual (rojo/amarillo/negro, tipografía Anton + Archivo Black)
+  • Evitar absolutamente TODOS los clichés prohibidos
+  • Sonar a que lo dijo un carajo con hambre, no un manual de marketing
+
+Los textos están listos para copiar y pegar en las etiquetas HTML/PHP
+correspondientes. Si ves algo que no encaja con el layout exacto de una
+página, avísame y lo ajusto al milímetro.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  1.  HERO — INDEX.PHP                                                   ║
+║  (Sección principal de landing. Ya existe con h1 + p + botones)         ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HEADLINES (3 opciones)
+
+  Opción A — RECOMENDADA:
+  "MANÁ. LA COMIDA QUE NO ENGORDA. LLEGA AL CORAZÓN."
+  → Por qué: Es el concepto fundacional de la marca. Diferencia, provoca
+    conversación, y conecta emocional e irreverentemente. Funciona en el
+    hero y como estribillo en toda la comunicación.
+
+  Opción B:
+  "¿HAMBURGUESA O MANÁ? NO HAY COMPARACIÓN."
+  → Por qué: Juega con la idea de que Maná no es "una hamburguesa más",
+    sino una categoría aparte. Bueno para campañas cortas o vallas.
+
+  Opción C:
+  "EL ÚNICO LUGAR DONDE TU PEDIDO LLEGA ANTES QUE TÚ."
+  → Por qué: Apela a la velocidad del delivery. Funciona si la promesa
+    operativa es real (menos de 30 min).
+
+▶  SUBHEADLINE (actual: "Sabor que alimenta el alma")
+  Reemplazar por:
+  "Nuestra comida no engorda porque no llega al estómago, sino al corazón.
+  ¿O creíste que este sabor era normal?"
+
+  → Se conecta DIRECTAMENTE con el headline. Mantiene el misterio y la
+    sonrisa. Provoca que el usuario quiera saber más.
+
+▶  BOTONES DEL HERO
+  Actual: "VER MENÚ →" / "EXPLORAR"
+  Propuesta:
+    • CTA principal: "VER MENÚ Y PEDIR →"
+    • CTA secundario: "CONOCER MANÁ"
+    → "Ver Menú" es correcto y directo. Le agregamos "y Pedir" para que
+      el usuario sepa que desde ahí puede completar toda la acción.
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  2.  CATEGORÍAS — INDEX.PHP & MENU.PHP                                  ║
+║  (Ya existen como tarjetas en index y filtros + secciones en menu)      ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  TEXTOS PARA CADA CATEGORÍA (para usar como h2 en menu.php
+   y como hover/tooltip en index.php)
+
+  ┌──────────────┬────────────────────────────────────────────────────────┐
+  │ Categoría    │ Headline de categoría                                  │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Hamburguesas │ "LAS CLÁSICAS QUE NADIE SUPERA.                       │
+  │              │  150 GRAMOS DE PURO AMOR."                             │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Especiales   │ "PARA LOS QUE PIDEN MÁS. MUCHO MÁS."                  │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Hot Dogs     │ "NO ES UN HOT DOG CUALQUIERA.                         │
+  │              │  ES MANÁ DOG. RESPETA EL NOMBRE."                      │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Enrollados   │ "ENROLLADOS QUE NO CABEN EN LA MESA. LITERAL."         │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Pepitos      │ "SI EL PAN HABLARA, PEDIRÍA MÁS CARNE."               │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Papas        │ "PAPAS QUE HACEN FELIZ A TUS PAPILAS.                 │
+  │              │  Y A TU ESTÓMAGO."                                     │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Extras       │ "POR SI LO POCO NO ES SUFICIENTE.                     │
+  │              │  TODO LO QUE AMAS POR SEPARADO."                       │
+  ├──────────────┼────────────────────────────────────────────────────────┤
+  │ Bebidas      │ "PARA BAJAR EL MANÁ. O PARA SUBIRLE."                  │
+  └──────────────┴────────────────────────────────────────────────────────┘
+
+▶  PARA LOS FILTROS DEL MENÚ (botones en menu.php)
+  Texto de cada botón de filtro:
+    • Todos       → "TODOS"
+    • Hamburguesas → "HAMBURGUESAS"
+    • Especiales  → "ESPECIALES"
+    • Hot Dogs    → "HOT DOGS"
+    • Enrollados  → "ENROLLADOS"
+    • Pepitos     → "PEPITOS"
+    • Papas       → "PAPAS"
+    • Extras      → "EXTRAS"
+    • Bebidas     → "BEBIDAS"
+  → Se mantienen igual. Son claros y funcionales.
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  3.  COPY DE PRODUCTOS — MENU.PHP                                       ║
+║  (Descripciones cortas para cada item del menú)                         ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HAMBURGUESAS
+
+  Sencilla (ham01):
+  "Carne 100% de res, lechuga, tomate, cebolla, kétchup y mostaza.
+  Lo básico bien hecho. Para los que no complican la vida."
+
+  Maná Burger (ham02):
+  "Doble carne angus, queso americano, tocineta ahumada, cebolla
+  caramelizada, salsa Maná. La burger que empezó todo. El abrazo
+  que no sabías que necesitabas."
+
+  Maná Super Crispy (ham03):
+  "Pollo crispy, queso, tocineta, lechuga, tomate y salsa ranch.
+  Cruje más fuerte que tu dignidad cuando pides otro. Sabemos
+  que vas a repetir."
+
+  Maná Mixta (ham04):
+  "Carne de res + pollo crispy, doble queso, tocineta, huevo,
+  cebolla, lechuga, tomate y salsas. Dos proteínas, un destino:
+  tu felicidad."
+
+  Maná Chuleta-Crispy (ham05):
+  "Chuleta de cerdo empanizada + pollo crispy, queso, tocineta,
+  lechuga, tomate, cebolla. La dupla que no sabías que necesitabas.
+  Hasta que la probaste."
+
+  Maná Ahumada (ham06):
+  "Carne de res ahumada, queso ahumado, tocineta, cebolla
+  caramelizada, salsa BBQ ahumada. Todo huele a gloria.
+  Literal."
+
+  Maná Chuleta Ahumada (ham07):
+  "Chuleta de cerdo ahumada, queso, tocineta, cebolla caramelizada,
+  salsa de la casa. Para los que saben que lo ahumado es otro nivel."
+
+▶  ESPECIALES
+
+  Maná Chicken Grill (esp01):
+  "Pechuga de pollo grillada, queso, lechuga, tomate, cebolla,
+  aderezo de la casa. Cuando quieres comer rico sin sentirte
+  culpable. Pero igual lo haces."
+
+  Maná Cheese (esp02):
+  "Carne de res, triple queso (amarillo, mozzarella, parmesano),
+  tocineta, cebolla caramelizada. Tres quesos. Una sola palabra:
+  pecado."
+
+  Maná Cheese Crispy (esp03):
+  "Pollo crispy, triple queso, tocineta, lechuga, tomate, salsa
+  especial. El primo crujiente del Maná Cheese. Igual de
+  pecador."
+
+  Maná Trifásica (esp04):
+  "Carne de res + pollo crispy + chuleta ahumada, triple queso,
+  tocineta, huevo, cebolla, lechuga, tomate. TRES PROTEÍNAS.
+  Una hamburguesa que no pregunta, ordena. Para verdaderos
+  depredadores."
+
+▶  HOT DOGS
+
+  Maná Sencillo (hd01):
+  "Pan suave, salchicha, papa pay, queso amarillo, salsas clásicas.
+  El perro de toda la vida. Pero hecho como dios manda."
+
+  Maná Dog (hd02):
+  "Pan artesanal, salchicha alemana, papa pay, queso, tocineta,
+  cebolla caramelizada, salsas. No es un hot dog cualquiera.
+  Es Maná Dog. Respeta el nombre."
+
+  Maná Clásico (hd03):
+  "Pan artesanal, salchicha especial, papa pay, queso amarillo,
+  repollo, tomate, cebolla, salsas. El clásico que nunca falla.
+  Por algo será."
+
+  Maná Especial (hd04):
+  "Pan artesanal, salchicha alemana, papa pay, queso, tocineta,
+  cebolla caramelizada, lechuga, tomate, salsas, huevo de codorniz.
+  Escoge tu salchicha: polaca, alemana, frankfurt, picante o
+  pavipollo. Después hablamos."
+
+  Especial Maná Clásico (hd05):
+  "Pan artesanal, salchicha especial, papa pay, queso, tocineta,
+  repollo, tomate, cebolla caramelizada, huevo de codorniz, salsas.
+  El clásico pero con todo. Porque a veces hay que darse su gusto."
+
+▶  ENROLLADOS
+
+  Mixto (enr01):
+  "Carne de res + pollo, queso, verduras salteadas, salsas envueltos
+  en tortilla de harina. Que no te engañe el nombre. Mixto pero
+  con personalidad."
+
+  Doble Proteína (enr02):
+  "Carne de res + pollo crispy, doble queso, tocineta, verduras
+  salteadas, salsas, tortilla grande. 1.6 KILOS DE PURO MANÁ.
+  ¿Seguro que vienes solo? Este enrollado no es para cualquiera.
+  Es para el que tiene hambre de verdad."
+
+  Especial Chuleta Ahumada (enr03):
+  "Chuleta de cerdo ahumada, queso, tocineta, verduras salteadas,
+  cebolla caramelizada, salsas. El favorito de los que saben
+  que lo ahumado no se negocia."
+
+▶  PEPITOS
+
+  Pepiperro (pep01):
+  "Pan artesanal, carne de res desmechada, queso, papa pay,
+  repollo, tomate, cebolla, salsas. El pepito clásico.
+  El que tu abuelito respetaría."
+
+  Mixto Pepimaná (pep02):
+  "Carne de res desmechada + pollo, queso, tocineta, papa pay,
+  repollo, tomate, cebolla caramelizada, salsas. Dos carnes,
+  un solo pepito. La evolución."
+
+▶  PAPAS
+
+  Salchipapa (pap01):
+  "Papas fritas, salchicha alemana, queso amarillo, tocineta,
+  salsas. El clásico de clásicos. La acompañante fiel de tu
+  viernes por la noche."
+
+  Tender de Pollo (pap02):
+  "Papas fritas, tiras de pollo empanizado, queso amarillo,
+  tocineta, salsas. Como la salchipapa, pero con pollo.
+  Porque el pollo también tiene sus fans."
+
+  Papas Mixtas (pap03):
+  "Papas fritas, carne de res desmechada + salchicha, queso
+  amarillo, tocineta, salsas. Carne y salchicha en una misma
+  papa. La combinación que no sabías que necesitabas."
+
+  Tripapas Maná (pap04):
+  "Papas fritas, carne de res + pollo + salchicha, triple queso,
+  tocineta, cebolla caramelizada, salsas. Papas, pollo crispy,
+  lomo, salchicha, queso, tocineta... ¿Esto es una comida o
+  un premio?"
+
+▶  EXTRAS
+
+  "Por si lo poco no es suficiente."
+  • Porción de Papa     → $3.00  — "Más papas. Porque nunca son suficientes."
+  • Tocineta            → $2.00  — "Tocineta extra. La respuesta correcta."
+  • Queso               → $1.50  — "Queso amarillo extra. Más queso = más felicidad."
+  • Salchicha           → $2.00  — "Salchicha alemana extra. Por si una no basta."
+  • Pollo               → $3.00  — "Pollo extra. El que nunca sobra."
+  • Queso Parmesano     → $2.50  — "Parmesano rallado. Para los finos."
+  • Extra Queso HD      → $0.50  — "Queso extra para tu hot dog. Pequeño pero potente."
+  • Extra Tocineta HD   → $0.50  — "Tocineta extra para tu hot dog. Porque la vida es una sola."
+
+▶  BEBIDAS
+
+  "Para bajar el Maná. O para subirle."
+  • Refresco            → $1.50  — "Lata 355ml: Coca-Cola, Sprite, Malta o Frescolita."
+  • Nestea              → $1.50  — "Té helado sabor limón 500ml. Frescura líquida."
+  • Jugo de Parchita    → $2.00  — "Jugo natural de parchita 500ml. El que sabe, sabe."
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  4.  OFERTAS Y PROMOCIONES — OFERTAS.PHP                                ║
+║  (Sección admin de ofertas / banners promocionales en frontend)         ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HEADLINE PARA OFERTA TEMPORAL:
+  "POR TIEMPO LIMITADO.
+   PORQUE LA GLOTONERÍA TAMBIÉN MERECE DESCUENTO."
+
+▶  HEADLINE PARA PRODUCTO EN OFERTA:
+  "ESTO NO ES UN ERROR. ES UNA OFERTA.
+   APROVECHA ANTES DE QUE VOLVAMOS A NUESTRO SENTIDO."
+
+▶  BADGE DE OFERTA (etiqueta sobre la imagen del producto):
+  "🔥 OFERTA"
+
+▶  BADGE DE PRODUCTO NUEVO:
+  "🆕 NUEVO"
+
+▶  BADGE DE MÁS VENDIDO:
+  "🔥 MÁS VENDIDO"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  5.  CARRITO — CARRITO.PHP                                             ║
+║  (Página de revisión del pedido antes del checkout)                     ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  TÍTULO DE LA PÁGINA (hero h1):
+  "TU PEDIDO"
+
+▶  SUBTEXTO DEL HERO (cuando hay productos):
+  "[cantidad] producto[s] en tu pedido"
+
+▶  ESTADO VACÍO (cuando no hay nada en el carrito):
+  Título: "NADA AQUÍ AÚN"
+  Subtítulo: "¿MUCHA HAMBRE O MUCHA PENDEJERÍA? ANDA A PEDIR ALGO."
+  Botón: "VER MENÚ"
+
+▶  TEXTO DEL TOGGLE DELIVERY/RETIRO:
+  • Delivery: "LLEVAR"
+  • Retiro:   "RECOGER"
+  → Anteriormente decía "Delivery" y "Retiro". La versión corta
+    funciona mejor en móvil.
+
+▶  TABLA DE PRODUCTOS:
+  • Columna 1: "PRODUCTO"
+  • Columna 2: "PRECIO UNIT."
+  • Columna 3: "CANT."
+  • Columna 4: "SUBTOTAL"
+  • Columna 5: (icono eliminar)
+
+▶  SIDEBAR — RESUMEN:
+  Título: "RESUMEN"
+  • Subtotal:     "Subtotal"
+  • Descuento:    "Descuento"
+  • Total USD:    "TOTAL"
+  • Total Bs.:    "Total Bs."
+
+▶  CAMPO DE NOTAS:
+  Label:  "NOTAS"
+  Placeholder: "Ej: Sin cebolla, extra salsa, punto de la carne…"
+
+▶  BOTONES DE ACCIÓN:
+  • Ir a checkout:  "CONTINUAR AL PAGO →"
+  • Seguir viendo: "SEGUIR VIENDO EL MENÚ"
+  • Vaciar:         "VACIAR CARRITO"
+
+▶  TOAST NOTIFICACIONES (notificaciones flotantes):
+  • Producto agregado:  "SE SUMÓ AL PEDIDO"
+  • Producto quitado:   "SE FUE DEL PEDIDO"
+  • Cantidad cambiada:  "CANTIDAD ACTUALIZADA"
+  • Carrito vaciado:    "CARRITO VACÍO. ¿SE TE ANTANJÓ ALGO MÁS?"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  6.  CHECKOUT — CHECKOUT.PHP                                           ║
+║  (Flujo de 3 pasos: Datos → Pago → Confirmación)                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────────────
+  6.1  INDICADOR DE PASOS (step indicator)
+────────────────────────────────────────────────────────────────────────────
+
+  Paso 1: "DATOS"
+  Paso 2: "PAGO"
+  Paso 3: "CONFIRMACIÓN"
+
+────────────────────────────────────────────────────────────────────────────
+  6.2  PASO 1 — DATOS DEL PEDIDO
+────────────────────────────────────────────────────────────────────────────
+
+▶  TÍTULO DEL PASO 1:
+  "¿DÓNDE TE PARTIMOS ESTE MANÁ?"
+
+▶  TOGGLE DELIVERY / RETIRO:
+  • Delivery: "LLEVAR  →  A MI CASA (O A LA CASA DE UN AMIGO. NO JUZGAMOS.)"
+  • Retiro:   "RECOGER →  YO PASO A BUSCARLO. LA EMOCIÓN TAMBIÉN SE CAMINA."
+
+▶  FORMULARIO DE DELIVERY:
+  • Teléfono:       placeholders → "+58 412 123 4567"
+  • Dirección:      placeholder → "Escribe tu dirección completa"
+  • Referencia:     placeholder → "Calle, avenida, casa #, apto"
+  • Ciudad/Estado:  placeholder → "Caracas"
+  • Botón geolocalización: "USAR MI UBICACIÓN"
+
+▶  SECCIÓN DE RETIRO:
+  Título: "RETIRAS EN NUESTRO LOCAL"
+  Dirección: "Av. Principal de Las Mercedes, CC Mercede Plaza, Local 2, Caracas"
+  Horario: "Lun - Sáb 11:00 AM - 11:00 PM · Dom 12:00 PM - 10:00 PM"
+
+▶  NOTAS DEL PEDIDO:
+  Placeholder: "Ej: Sin cebolla, bien cocida, extra salsa, punto de la carne…"
+
+▶  BOTÓN PARA IR AL PASO 2:
+  "SÍ, QUIERO PAGAR →"
+
+────────────────────────────────────────────────────────────────────────────
+  6.3  PASO 2 — MÉTODO DE PAGO
+────────────────────────────────────────────────────────────────────────────
+
+▶  TÍTULO DEL PASO 2:
+  "DATOS PARA EL PAGO. FÁCIL, RÁPIDO, PAGOMÓVIL."
+
+▶  INSTRUCCIONES CLARAS (reemplazar el texto actual genérico):
+  "1. Abre tu app bancaria.
+   2. Ve a PagoMóvil.
+   3. Ingresa estos datos.
+   4. Pon el monto exacto.
+   5. Confirma y obtén tu número de referencia."
+
+▶  CAJA DE INFORMACIÓN DE PAGOMÓVIL:
+  Título: "📱 PAGOMÓVIL — CUENTA ACTIVA"
+  Datos de la cuenta (ejemplo):
+    • Banco:      "BANCO PROVINCIAL"
+    • Teléfono:   "0412-1234567"
+    • Cédula/RIF: "J-12345678-0"
+    • Banco      "BANCO DE VENEZUELA"
+    • Teléfono:   "0424-7654321"
+    • Cédula/RIF: "J-87654321-0"
+
+▶  CAJA DE TOTAL:
+  Label: "TOTAL A PAGAR"
+  USD: "$XX.XX"
+  BS: "Bs. XX.XX"
+
+▶  REFERENCIA:
+  Label: "NÚMERO DE REFERENCIA (EL QUE TE DIO TU BANCO AL PAGAR)"
+  Placeholder: "Ej: 1234567890"
+
+▶  CAPTURA:
+  Texto upload: "SUBIR CAPTURA DEL PAGO (FOTO DE PANTALLA O COMPROBANTE)"
+  Formato admitido: "JPG o PNG · Máximo 5MB"
+  Botón upload: "SELECCIONAR ARCHIVO"
+
+▶  ERROR DE VALIDACIÓN (referencia vacía):
+  "INGRESA EL NÚMERO DE REFERENCIA QUE TE DIO TU BANCO"
+
+▶  BOTÓN CONFIRMAR PAGO:
+  "YA PAGUÉ. CONFIRMA MI PEDIDO."
+
+▶  BOTÓN VOLVER A DATOS:
+  "← VOLVER A DATOS DEL PEDIDO"
+
+────────────────────────────────────────────────────────────────────────────
+  6.4  PASO 3 — CONFIRMACIÓN / ÉXITO
+────────────────────────────────────────────────────────────────────────────
+
+▶  HEADLINE DE ÉXITO:
+  "¡PAGO REGISTRADO!
+   TU MANÁ ESTÁ EN CAMINO."
+
+▶  SUBTEXTO:
+  "Gracias por elegir Maná. Tu comida va directo al corazón.
+   (Y al estómago, pero no digas que te lo advertimos)."
+
+▶  NÚMERO DE PEDIDO:
+  Label: "NÚMERO DE PEDIDO"
+  Display: "#MANA-XXXXX"
+
+▶  TEXTO BOTÓN WHATSAPP:
+  "ENVIAR A WHATSAPP → LISTO PARA COCINA"
+
+▶  MENSAJE WHATSAPP PREDEFINIDO (para el dueño/cocina):
+  "¡Hola, Maná! 🍔 Acabo de hacer un pedido y ya pagué.
+   Aquí está todo: [RESUMEN DEL PEDIDO].
+   Mi referencia es [REFERENCIA].
+   Adjunto el capture. ¡A darle!"
+
+▶  ERROR EN PAGO (si falla la validación del pago en backend):
+  Título: "ALGO SALIÓ MAL"
+  Cuerpo: "PERO NO TE PREOCUPES, TU DINERO ESTÁ SEGURO.
+   REVISA LA REFERENCIA Y VUELVE A INTENTAR.
+   SI EL PROBLEMA SIGUE, ESCRIBENOS DIRECTAMENTE."
+
+────────────────────────────────────────────────────────────────────────────
+  6.5  MENSAJES DE SEGURIDAD (sidebar del checkout)
+────────────────────────────────────────────────────────────────────────────
+
+  • "Conexión segura (SSL)"
+  • "Pago protegido · Datos cifrados"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  7.  CONFIRMACIÓN — CONFIRMACION.PHP                                   ║
+║  (Pantalla post-pago exitoso con resumen y WhatsApp)                    ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HEADLINE:
+  "¡PEDIDO CONFIRMADO!"
+
+▶  SUBHEADLINE:
+  "Hemos recibido tu pedido y ya está en proceso."
+
+▶  NÚMERO DE PEDIDO:
+  Label: "NÚMERO DE PEDIDO"
+  Display: "#MANA-XXXXX" (en amarillo)
+
+▶  TIEMPO ESTIMADO:
+  "Tiempo estimado: 25 — 35 minutos"
+
+▶  TÍTULO DEL RESUMEN:
+  "RESUMEN FINAL"
+
+▶  TABLA DE PRODUCTOS:
+  • "PRODUCTO"
+  • "CANT."
+  • "TOTAL"
+
+▶  INFORMACIÓN ADICIONAL:
+  • "TIPO DE PEDIDO":    Delivery / Retiro
+  • "MÉTODO DE PAGO":    PagoMóvil / Transferencia
+  • "DIRECCIÓN":         [dirección]
+  • "FECHA":             [fecha]
+
+▶  BOTÓN WHATSAPP (enviar pedido a cocina):
+  Texto: "ENVIAR A WHATSAPP →"
+  Mensaje predefinido para cocina:
+  "🍔 NUEVO PEDIDO MANÁ 🍔
+   Pedido: #MANA-XXXXX
+   Cliente: [Nombre]
+   Teléfono: [Teléfono]
+   Tipo: [Delivery/Retiro]
+   Dirección: [Dirección]
+   Items:
+   - [Producto] x[Cantidad]
+   Total: $[Total]
+   Referencia: [Referencia]
+   Capture: [URL]
+   ¡A darle!"
+
+▶  MENSAJE DE AGRADECIMIENTO:
+  "Gracias por elegir Maná. Tu comida va directo al corazón."
+
+▶  BOTONES POST-PAGO:
+  • "PEDIR DE NUEVO"     → va a menu.php
+  • "VOLVER AL INICIO"   → va a index.php
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  8.  REGISTRO — REGISTRO.PHP                                           ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HEADLINE:
+  "CREAR CUENTA"
+
+▶  SUBTEXTO:
+  "Regístrate en segundos. Solo lo esencial para que tu pedido
+   llegue rápido."
+
+▶  CAMPOS DEL FORMULARIO:
+  • Nombre:       placeholder → "Ej: María Pérez"
+  • Teléfono:     placeholder → "+58 412 123 4567"
+  • Email:        placeholder → "correo@ejemplo.com"
+  • Contraseña:   placeholder → "Mínimo 6 caracteres"
+
+▶  BOTÓN DE REGISTRO:
+  "REGISTRARSE Y PEDIR"
+
+▶  LINK A LOGIN:
+  "¿YA TENGO CUENTA? ENTRAR"
+
+▶  MENSAJE DE ÉXITO:
+  "¡CUENTA CREADA CON ÉXITO! REDIRIGIENDO…"
+
+▶  ERRORES DE VALIDACIÓN:
+  • Nombre vacío:     "EL NOMBRE DEBE TENER AL MENOS 2 CARACTERES"
+  • Teléfono vacío:   "INGRESA UN NÚMERO DE TELÉFONO"
+  • Email inválido:   "INGRESA UN EMAIL VÁLIDO"
+  • Contraseña corta: "LA CONTRASEÑA DEBE TENER AL MENOS 6 CARACTERES"
+  • Email duplicado:  "ESTE EMAIL YA ESTÁ REGISTRADO. ¿QUIERES INICIAR SESIÓN?"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  9.  LOGIN — LOGIN.PHP                                                 ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HEADLINE:
+  "INICIAR SESIÓN"
+
+▶  SUBTEXTO:
+  "Entra para pedir más rápido"
+
+▶  CAMPOS DEL FORMULARIO:
+  • Email:        placeholder → "correo@ejemplo.com"
+  • Contraseña:   placeholder → "••••••••"
+
+▶  LINK DE OLVIDÉ MI CONTRASEÑA:
+  "¿OLVIDASTE TU CONTRASEÑA?"
+
+▶  BOTÓN DE LOGIN:
+  "ENTRAR"
+
+▶  LINK A REGISTRO:
+  "¿NO TIENES CUENTA? REGÍSTRATE AQUÍ"
+
+▶  ERRORES DE VALIDACIÓN:
+  • Email vacío:        "INGRESA TU EMAIL"
+  • Contraseña corta:   "LA CONTRASEÑA DEBE TENER AL MENOS 6 CARACTERES"
+  • Credenciales malas: "EMAIL O CONTRASEÑA INCORRECTOS"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  10.  MICROCOPY GENERAL                                                 ║
+║  (Textos pequeños, tooltips, estados, loaders)                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  BOTÓN AGREGAR PRODUCTO (en menú):
+  "SUMAR AL PEDIDO"
+  → NO "Agregar +". "Sumar" es más coloquial y cálido.
+
+▶  BOTÓN DE CANTIDAD (en carrito):
+  • "+" → aumentar cantidad
+  • "−" → disminuir cantidad
+
+▶  BOTÓN ELIMINAR PRODUCTO (en carrito):
+  Tooltip: "QUITAR DEL PEDIDO"
+
+▶  LOADING SPINNER:
+  "CARGANDO TU MANÁ..."
+
+▶  TOAST — PRODUCTO AGREGADO:
+  "✅ SE SUMÓ AL PEDIDO"
+
+▶  TOAST — PRODUCTO ELIMINADO:
+  "🗑️ SE FUE DEL PEDIDO"
+
+▶  TOAST — ERROR GENERAL:
+  "ALGO PASÓ. INTENTA DE NUEVO."
+
+▶  TOAST — CARRITO ACTUALIZADO:
+  "🔄 PEDIDO ACTUALIZADO"
+
+▶  FOOTER (global):
+  Línea 1:
+  "MANÁ FAST FOOD — Nuestra comida no engorda porque no llega
+   al estómago, sino al corazón."
+  Línea 2:
+  "📍 Av. Principal, Local 5, Caracas | 📱 0414-1234567
+   🕐 Lun - Sáb 12pm - 11pm"
+
+▶  TÍTULO DEL SITIO (title tag sugerido):
+  "Maná Fast Food | La comida que llega al corazón"
+  → Reemplazar el actual "Sabor que Alimenta el Alma"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  11.  SEO COPY — META TITLE & DESCRIPTION POR PÁGINA                    ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Se recomienda actualizar los <title> y <meta name="description">
+de cada página.
+
+┌──────────────────┬──────────────────────────────────────────────────────┐
+│ Página           │ Meta Title (≤60 caracteres)                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ index.php        │ Maná Fast Food | Hamburguesas, Hot Dogs, Enrollados │
+│                  │ en Caracas                                          │
+│                  │ → 60 chars exactos                                  │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ menu.php         │ Menú — Maná Fast Food | Hamburguesas, Hot Dogs y    │
+│                  │ más                                                │
+│                  │ → 56 chars                                          │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ carrito.php      │ Tu Pedido — Maná Fast Food                          │
+│                  │ → 30 chars                                          │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ checkout.php     │ Pago — Maná Fast Food | Paga con PagoMóvil          │
+│                  │ → 51 chars                                          │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ confirmacion.php │ Pedido Confirmado — Maná Fast Food                  │
+│                  │ → 39 chars                                          │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ registro.php     │ Registro — Maná Fast Food | Crea tu Cuenta          │
+│                  │ → 48 chars                                          │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ login.php        │ Iniciar Sesión — Maná Fast Food                     │
+│                  │ → 36 chars                                          │
+└──────────────────┴──────────────────────────────────────────────────────┘
+
+┌──────────────────┬──────────────────────────────────────────────────────┐
+│ Página           │ Meta Description (≤155 caracteres)                  │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ index.php        │ Maná Fast Food en Caracas. Hamburguesas, hot dogs,  │
+│                  │ enrollados, pepitos, papas y más. Pide online y     │
+│                  │ recibe en casa. La comida que llega al corazón. ❤️  │
+│                  │ → 149 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ menu.php         │ Explora el menú completo de Maná Fast Food:         │
+│                  │ Hamburguesas, Hot Dogs, Enrollados, Pepitos, Papas, │
+│                  │ Extras y Bebidas. Pide lo que se te antoje. 🍔      │
+│                  │ → 151 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ carrito.php      │ Revisa tu pedido de Maná Fast Food antes de pagar.  │
+│                  │ Elige delivery o retiro y confirma tu orden.        │
+│                  │ → 108 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ checkout.php     │ Completa tu pedido en Maná Fast Food. Ingresa tus   │
+│                  │ datos y paga con PagoMóvil de forma rápida y segura.│
+│                  │ → 119 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ confirmacion.php │ Tu pedido en Maná Fast Food ha sido confirmado.     │
+│                  │ Gracias por tu compra. Envía a cocina por WhatsApp. │
+│                  │ → 118 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ registro.php     │ Regístrate en Maná Fast Food en segundos. Crea tu   │
+│                  │ cuenta y empieza a pedir tu comida favorita.        │
+│                  │ → 104 chars                                         │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ login.php        │ Inicia sesión en tu cuenta Maná Fast Food y accede  │
+│                  │ a tus pedidos. Entra y pide sin escusas.            │
+│                  │ → 103 chars                                         │
+└──────────────────┴──────────────────────────────────────────────────────┘
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  12.  REDES SOCIALES                                                    ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  BIO DE INSTAGRAM / TIKTOK:
+  "🍔 Maná Fast Food | Caracas
+   Nuestra comida no engorda, llega al corazón ❤️
+   📲 Pide por DM o WhatsApp"
+
+▶  PUBLICACIÓN TIPO (variedad de formatos):
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ Formato: Foto de la Trifásica                                       │
+  │                                                                     │
+  │ "LA MANÁ TRIFÁSICA ESTÁ DE VUELTA.                                  │
+  │  3 proteínas, 1 hamburguesa.                                       │
+  │  ¿Tú crees que puedes con ella? 🍔🔥                                │
+  │                                                                     │
+│  #ManaFastFood #Trifasica #Caracas #Hamburguesas #Foodie"            │
+  └──────────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ Formato: Video del crispy                                           │
+  │                                                                     │
+  │ "ESCUCHA ESO. 🎧                                                    │
+  │  Es el sonido de la Maná Super Crispy.                              │
+  │  Cruje más fuerte que tu ex.                                        │
+  │  Pide la tuya en ManaFastFood.com 🍔✨"                             │
+  │                                                                     │
+  │  #ManaSuperCrispy #Crispy #ManaFastFood #Caracas                    │
+  └──────────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ Formato: Historia (Stories) — Poll / Encuesta                       │
+  │                                                                     │
+  │ "Hoy nos comemos:                                                    │
+  │  🍔 Hamburguesa Trifásica                                           │
+  │  🌯 Enrollado Doble Proteína                                        │
+  │  ¿Tú cuál pides?"                                                   │
+  └──────────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ Formato: Testimonial / UGC                                          │
+  │                                                                     │
+  │ ""Pedí la Doble Proteína para mí solo.                              │
+  │   Error. Tuve que pedir ayuda y no me da vergüenza."                │
+  │   — Cliente real de Maná.                                           │
+  │                                                                     │
+  │   La Doble Proteína: 1.6 kilos de puro Maná. ¿Te animas? 💪🌯"      │
+  │                                                                     │
+  │  #DobleProteina #ManaFastFood #Caracas #Enrollados                  │
+  └──────────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ Formato: Oferta relámpago (Stories)                                 │
+  │                                                                     │
+  │ "⏳ OFERTA RELÁMPAGO ⏳                                              │
+  │  Por tiempo limitado:                                               │
+  │  Compra una Maná Burger y la segunda va al 30% OFF.                 │
+  │  Código: MANAX2                                                     │
+  │  Corre, que esto no dura. 🏃‍♂️🔥"                                   │
+  └──────────────────────────────────────────────────────────────────────┘
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  13.  WHATSAPP — MENSAJES AUTOMÁTICOS                                   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  AL CONFIRMAR PEDIDO (mensaje que se envía a cocina):
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ 🍔 NUEVO PEDIDO MANÁ 🍔                                            │
+  │                                                                     │
+  │ Pedido: #MANA-XXXXX                                                 │
+  │ Cliente: [Nombre del cliente]                                       │
+  │ Teléfono: [Teléfono de contacto]                                    │
+  │ Tipo: [Delivery / Retiro]                                           │
+  │ Dirección: [Dirección si aplica]                                    │
+  │ Notas: [Notas del pedido]                                           │
+  │                                                                     │
+  │ Items:                                                              │
+  │ • [Producto 1] x[Cantidad] — $[Subtotal]                           │
+  │ • [Producto 2] x[Cantidad] — $[Subtotal]                           │
+  │                                                                     │
+  │ Total: $[Total USD] (Bs. [Total BS])                                │
+  │ Referencia: [Número de referencia]                                  │
+  │ Capture: [URL de la imagen subida]                                  │
+  │                                                                     │
+  │ ✅ Cliente ya pagó. ¡A darle! 🔥                                    │
+  └──────────────────────────────────────────────────────────────────────┘
+
+▶  MENSAJE DE CONFIRMACIÓN AL CLIENTE (post-pago):
+  "¡Hola! 🙌
+   Recibimos tu pago y tu pedido #MANA-XXXXX ya está en cocina.
+   Te notificaremos cuando esté listo.
+   Gracias por pedir en Maná Fast Food. ❤️🍔"
+
+▶  PLANTILLA DE WHATSAPP — CONTACTO DE SOPORTE:
+  "Hola, Maná. 👋
+   Quiero hacer una consulta sobre mi pedido #MANA-XXXXX.
+   [Mensaje]"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  14.  SEO COPY — KEYWORDS Y TAGS                                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  KEYWORDS PRINCIPALES (para estrategia de contenido):
+  • maná fast food
+  • hamburguesas caracas
+  • hot dogs caracas
+  • comida rápida caracas
+  • delivery caracas
+  • super crispy
+  • hamburguesa trifásica
+  • enrollado doble proteína
+  • pepitos caracas
+  • papas fritas caracas
+  • pago móvil comida
+  • mana burger
+
+▶  HASHTAGS PARA REDES:
+  • #ManaFastFood
+  • #ManaBurger
+  • #SuperCrispy
+  • #Trifasica
+  • #DobleProteina
+  • #ManaDog
+  • #ComidaQueLlegaAlCorazon
+  • #Caracas
+  • #HamburguesasCaracas
+  • #HotDogsCaracas
+  • #FoodieCaracas
+  • #DeliveryCaracas
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  15.  VARIANTES DE TONO (para A/B testing o redes)                     ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  TONO A — DIRECTO / PROVOCATIVO (el principal, el de arriba)
+  "Nuestra comida no engorda. Llega al corazón."
+  → Para hero, bio, comunicación principal.
+
+▶  TONO B — JUGUETÓN / MEME (para redes sociales, historias)
+  "La Trifásica no te va a dejar dormir.
+   Pero tampoco te va a dejar con hambre. 💀🔥"
+  → Para TikToks, Reels, memes.
+
+▶  TONO C — PREMIUM / SOFISTICADO (para fechas especiales)
+  "Maná. Donde el sabor encuentra su punto exacto.
+   Carne angus, pan artesanal, ingredientes seleccionados.
+   Esto no es fast food. Es Maná."
+  → Para San Valentín, cenas especiales.
+
+▶  TONO D — URGENTE / OFERTA (para promociones)
+  "Esto no es un error. Es una oferta.
+   Corre antes de que volvamos a nuestro sentido."
+  → Para banners de oferta, Stories con límite de tiempo.
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  16.  TEXTOS PARA A/B TESTING                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HERO HEADLINE — TEST A vs B vs C
+  A: "MANÁ. LA COMIDA QUE NO ENGORDA. LLEGA AL CORAZÓN."
+  B: "¿HAMBURGUESA O MANÁ? NO HAY COMPARACIÓN."
+  C: "EL ÚNICO LUGAR DONDE TU PEDIDO LLEGA ANTES QUE TÚ."
+
+▶  CTA DEL CHECKOUT — TEST A vs B
+  A: "SÍ, QUIERO PAGAR →"
+  B: "CONFIRMAR PEDIDO →"
+
+▶  BOTÓN AGREGAR PRODUCTO — TEST A vs B
+  A: "SUMAR AL PEDIDO"
+  B: "AGREGAR +"
+
+▶  BOTÓN WHATSAPP POST-PAGO — TEST A vs B
+  A: "ENVIAR A WHATSAPP → LISTO PARA COCINA"
+  B: "NOTIFICAR A COCINA →"
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  17.  VERSIÓN EN OTRO IDIOMA — INGLÉS (para expansión futura)          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+▶  HERO:
+  "MANÁ. THE FOOD THAT DOESN'T FILL YOU UP.
+   IT REACHES YOUR HEART."
+
+▶  TAGLINE (bio redes en inglés):
+  "🍔 Maná Fast Food | Caracas
+   Our food doesn't fill you up. It reaches your heart. ❤️
+   📲 DM or WhatsApp to order."
+
+▶  CTA CHECKOUT:
+  "YES, I WANT TO PAY →"
+
+▶  CONFIRMACIÓN:
+  "ORDER CONFIRMED! Your Maná is on its way."
+
+▶  REGISTRO:
+  "SIGN UP AND ORDER FAST. NO NONSENSE."
+
+▶  LOGIN:
+  "LOG IN AND ORDER. NO EXCUSES."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CIERRE DE VERBIX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓  17 secciones cubiertas
+✓  Copy alineado con las 9 páginas .php existentes
+✓  0 clichés usados
+✓  Tono energético, callejero, premium sin ser panfletario
+✓  SEO meta tags naturales para cada página
+✓  A/B testing variants listas
+✓  Versión en inglés incluida
+✓  Mensajes WhatsApp para cocina y cliente predefinidos
+✓  Redes sociales: bio + 4 formatos de publicación
+
+¿Necesitas que ajuste algo? ¿Que profundice en alguna sección?
+¿O que prepare una versión reducida para implementar ya?
+
+— VERBIX, listo para lo que sigue. 🔥

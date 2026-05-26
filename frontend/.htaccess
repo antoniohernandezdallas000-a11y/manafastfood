@@ -1,0 +1,169 @@
+# ============================================================
+# MANÁ FAST FOOD — CONFIGURACIÓN APACHE (.htaccess)
+# Versión: 1.0
+# ============================================================
+
+# ------------------------------------------------------------
+# ACTIVAR REWRITE ENGINE
+# ------------------------------------------------------------
+RewriteEngine On
+Options -MultiViews
+
+# ------------------------------------------------------------
+# CANONICAL: WWW → NON-WWW
+# ------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^www\.manafastfood\.com [NC]
+RewriteRule ^(.*)$ https://manafastfood.com/$1 [L,R=301]
+
+# ------------------------------------------------------------
+# SEGURIDAD: HTTP → HTTPS (desactivado para desarrollo local)
+# ------------------------------------------------------------
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# ------------------------------------------------------------
+# CANONICAL: index.php → /
+# ------------------------------------------------------------
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://manafastfood.com/ [L,R=301]
+
+# ------------------------------------------------------------
+# SEGURIDAD: BLOQUEAR ACCESO A ARCHIVOS SENSIBLES
+# ------------------------------------------------------------
+<FilesMatch "\.(env|log|sql|md|git|json|lock|phar|sh|bat)$">
+    Require all denied
+</FilesMatch>
+
+# ------------------------------------------------------------
+# SEGURIDAD: BLOQUEAR LISTADO DE DIRECTORIOS
+# ------------------------------------------------------------
+Options -Indexes
+
+# ------------------------------------------------------------
+# SEGURIDAD: OCULTAR FIRMA DEL SERVIDOR
+# ------------------------------------------------------------
+ServerSignature Off
+# Nota: ServerTokens solo se configura en httpd.conf, no en .htaccess
+
+# ------------------------------------------------------------
+# COMPRESIÓN GZIP/BROTLI
+# ------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+    AddOutputFilterByType DEFLATE application/x-javascript application/xml+rss
+    AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+    AddOutputFilterByType DEFLATE font/woff font/woff2
+</IfModule>
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType BROTLI application/javascript application/json application/xml
+    AddOutputFilterByType BROTLI font/woff font/woff2 image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------
+# CABECERAS DE CACHÉ
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+
+    # HTML: 1 hora (no cachear dinámico por mucho tiempo)
+    ExpiresByType text/html "access plus 1 hour"
+
+    # CSS, JS: 1 mes
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Imágenes: 2 meses
+    ExpiresByType image/jpeg "access plus 2 months"
+    ExpiresByType image/png "access plus 2 months"
+    ExpiresByType image/gif "access plus 2 months"
+    ExpiresByType image/webp "access plus 2 months"
+    ExpiresByType image/svg+xml "access plus 2 months"
+    ExpiresByType image/x-icon "access plus 2 months"
+
+    # Fuentes: 6 meses
+    ExpiresByType font/woff "access plus 6 months"
+    ExpiresByType font/woff2 "access plus 6 months"
+    ExpiresByType application/font-woff "access plus 6 months"
+    ExpiresByType application/font-woff2 "access plus 6 months"
+
+    # JSON, XML: 1 día
+    ExpiresByType application/json "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cache-Control para archivos estáticos
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "max-age=5184000, public, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(woff|woff2)$">
+        Header set Cache-Control "max-age=15552000, public, immutable"
+    </FilesMatch>
+
+    # HTML: no cachear para que los cambios se reflejen
+    <FilesMatch "\.(php|html)$">
+        Header set Cache-Control "max-age=3600, public, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ------------------------------------------------------------
+# SEGURIDAD: CABECERAS HTTP
+# ------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Protección XSS
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Prevenir clickjacking
+    Header always append X-Frame-Options SAMEORIGIN
+
+    # Prevenir MIME sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # HSTS (solo si HTTPS está configurado)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+# ------------------------------------------------------------
+# REDIRECCIONES ESPECÍFICAS
+# ------------------------------------------------------------
+# Redirigir cart.php → carrito.php (unificación)
+RewriteCond %{THE_REQUEST} /cart\.php [NC]
+RewriteRule ^cart\.php$ /carrito.php [L,R=301]
+
+# Redirigir productos antiguos si aplica
+# RewriteRule ^producto/([0-9]+)$ /menu.php#$1 [L,R=301]
+
+# ------------------------------------------------------------
+# MANEJO DE ERRORES
+# ------------------------------------------------------------
+ErrorDocument 404 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 500 /index.php
+
+# ------------------------------------------------------------
+# PHP CONFIG (si está permitido)
+# ------------------------------------------------------------
+<IfModule mod_php.c>
+    php_value upload_max_filesize 5M
+    php_value post_max_size 10M
+    php_value max_execution_time 120
+    php_value max_input_time 60
+</IfModule>

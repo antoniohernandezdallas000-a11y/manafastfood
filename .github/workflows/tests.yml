@@ -1,0 +1,150 @@
+name: Maná Fast Food - Tests
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  unit-tests:
+    name: Unit Tests (PHPUnit)
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo, pdo_mysql, mbstring, gd, json
+          coverage: xdebug
+      
+      - name: Install PHP dependencies
+        run: composer install --no-progress --prefer-dist
+      
+      - name: Run Unit Tests
+        run: vendor/bin/phpunit --configuration tests/phpunit.xml --testsuite Unit --coverage-clover tests/coverage/clover.xml
+      
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-coverage
+          path: tests/coverage/
+
+  integration-tests:
+    name: Integration Tests (PHPUnit + MySQL)
+    runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root_password
+          MYSQL_DATABASE: mana_fast_food_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo, pdo_mysql, mbstring
+      
+      - name: Install PHP dependencies
+        run: composer install --no-progress --prefer-dist
+      
+      - name: Setup database
+        run: |
+          mysql -h 127.0.0.1 -u root -ptest_root_password mana_fast_food_test < sql/schema.sql
+          echo "Database ready"
+      
+      - name: Create .env for tests
+        run: |
+          echo "DB_HOST=127.0.0.1" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_NAME=mana_fast_food_test" >> .env
+          echo "DB_USER=root" >> .env
+          echo "DB_PASSWORD=test_root_password" >> .env
+          echo "JWT_SECRET=github_ci_jwt_secret" >> .env
+          echo "JWT_EXPIRY=24h" >> .env
+      
+      - name: Run Integration Tests
+        run: vendor/bin/phpunit --configuration tests/phpunit.xml --testsuite Integration
+        env:
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_NAME: mana_fast_food_test
+          DB_USER: root
+          DB_PASSWORD: test_root_password
+          JWT_SECRET: github_ci_jwt_secret
+
+  e2e-tests:
+    name: E2E Tests (Playwright)
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install PHP dependencies
+        run: composer install --no-progress --prefer-dist
+      
+      - name: Install Node.js dependencies
+        run: npm install
+      
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+      
+      - name: Create .env
+        run: |
+          echo "JWT_SECRET=github_ci_jwt_secret" >> .env
+          echo "SITE_URL=http://localhost:8000" >> .env
+      
+      - name: Start PHP server
+        run: |
+          php -S localhost:8000 -t . > /dev/null 2>&1 &
+          sleep 2
+          echo "PHP server started"
+      
+      - name: Create test fixture image
+        run: |
+          php -r "
+            \$img = imagecreatetruecolor(100, 100);
+            imagejpeg(\$img, 'tests/fixtures/test_capture.jpg', 90);
+            imagedestroy(\$img);
+            echo 'Test image created\n';
+          "
+      
+      - name: Run E2E tests
+        run: npx playwright test --project=Chromium
+        env:
+          BASE_URL: http://localhost:8000
+      
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: tests/playwright-report/
+      
+      - name: Upload test screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-screenshots
+          path: tests/test-results/

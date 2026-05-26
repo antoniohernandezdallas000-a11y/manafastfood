@@ -1,0 +1,18 @@
+# Ignorar archivos sensibles y del sistema
+.env
+*.log
+node_modules/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Archivos de configuracion local
+backend/config/database.php
+backend/config/credentials.php
+
+# Cache de templates/views
+*.cache

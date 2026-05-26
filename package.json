@@ -1,0 +1,14 @@
+{
+    "name": "mana-fast-food-tests",
+    "version": "1.0.0",
+    "description": "Maná Fast Food - E2E Tests",
+    "scripts": {
+        "test:e2e": "npx playwright test",
+        "test:e2e:ui": "npx playwright test --ui",
+        "test:e2e:report": "npx playwright show-report",
+        "test:e2e:debug": "npx playwright test --debug"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.40.0"
+    }
+}

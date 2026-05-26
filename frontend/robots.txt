@@ -1,0 +1,119 @@
+# ============================================================
+# MANÁ FAST FOOD — ROBOTS.TXT
+# Dominio: manafastfood.com
+# Generado: 2026-05-23
+# ============================================================
+
+# ------------------------------------------------------------
+# Agente global: permitir crawl de contenido público
+# ------------------------------------------------------------
+User-agent: *
+Allow: /
+Allow: /menu.php
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /fonts/
+
+# ------------------------------------------------------------
+# Bloquear páginas funcionales sin valor SEO
+# ------------------------------------------------------------
+Disallow: /login.php
+Disallow: /registro.php
+Disallow: /carrito.php
+Disallow: /checkout.php
+Disallow: /confirmacion.php
+
+# ------------------------------------------------------------
+# Bloquear backend y administración
+# ------------------------------------------------------------
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /models/
+Disallow: /middleware/
+Disallow: /helpers/
+Disallow: /uploads/
+
+# ------------------------------------------------------------
+# Bloquear archivos sensibles
+# ------------------------------------------------------------
+Disallow: /*.php$
+Disallow: /*.sql$
+Disallow: /*.env$
+Disallow: /*.log$
+Disallow: /*.json$
+Disallow: /copy/
+
+# ------------------------------------------------------------
+# Bloquear parámetros de tracking y sesión
+# ------------------------------------------------------------
+Disallow: /*?redirect=*
+Disallow: /*?return=*
+Disallow: /*?action=*
+
+# ------------------------------------------------------------
+# Crawl-delay para no saturar el servidor
+# ------------------------------------------------------------
+Crawl-delay: 10
+
+# ------------------------------------------------------------
+# Sitemap
+# ------------------------------------------------------------
+Sitemap: https://manafastfood.com/sitemap.xml
+
+# ------------------------------------------------------------
+# Reglas específicas para bots conocidos
+# ------------------------------------------------------------
+
+# Googlebot: permitir JavaScript y CSS para renderizado
+User-agent: Googlebot
+Allow: /
+Allow: /js/
+Allow: /css/
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /login.php
+Disallow: /registro.php
+Disallow: /carrito.php
+Disallow: /checkout.php
+Disallow: /confirmacion.php
+
+# Googlebot Image: permitir imágenes
+User-agent: Googlebot-Image
+Allow: /img/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /login.php
+Disallow: /registro.php
+Disallow: /carrito.php
+Disallow: /checkout.php
+Disallow: /confirmacion.php
+
+# AhrefsBot / SemrushBot / Majestic: rastreo normal
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# ------------------------------------------------------------
+# Desactivar robots que consumen recursos sin valor
+# ------------------------------------------------------------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://manafastfood.com/sitemap-style.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ============================================================
+       MANÁ FAST FOOD — SITEMAP.XML
+       Generado: 2026-05-23
+       ============================================================ -->
+
+  <!-- PÁGINAS PRINCIPALES — Priority 1.0 -->
+  <url>
+    <loc>https://manafastfood.com/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://manafastfood.com/img/og-mana.jpg</image:loc>
+      <image:title>Maná Fast Food</image:title>
+      <image:caption>La comida que llega al corazón</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/menu.php</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://manafastfood.com/img/og-menu.jpg</image:loc>
+      <image:title>Menú Maná Fast Food</image:title>
+      <image:caption>Hamburguesas, Hot Dogs, Enrollados, Pepitos, Papas</image:caption>
+    </image:image>
+  </url>
+
+  <!-- PÁGINAS FUNCIONALES — Priority 0.3, noindex ya en meta -->
+  <url>
+    <loc>https://manafastfood.com/login.php</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/registro.php</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/carrito.php</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/checkout.php</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/confirmacion.php</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <!-- PÁGINAS DE ADMIN (solo si son indexables, con auth) -->
+  <!--
+  <url>
+    <loc>https://manafastfood.com/admin/productos.php</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://manafastfood.com/admin/pedidos.php</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  -->
+
+  <!-- ARCHIVOS ESTÁTICOS Y RECURSOS -->
+  <url>
+    <loc>https://manafastfood.com/css/style.css</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/js/app.js</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/js/cart.js</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/js/auth.js</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://manafastfood.com/js/checkout.js</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+</urlset>
